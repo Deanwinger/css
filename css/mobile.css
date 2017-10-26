@@ -1,0 +1,24 @@
+.side-bar{
+  float: none;
+  position: relative;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+}
+
+.article-list {
+  margin: 0;
+}
+
+.side-bar .nav,
+.side-bar .tag-list{
+    display: none;
+  text-align: center;
+}
+
+#menu-checkbox:checked ~ .nav,
+#menu-checkbox:checked ~ .tag-list {
+    display: block;
+}

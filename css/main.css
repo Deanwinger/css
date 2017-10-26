@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body{
   background: #454545;
   line-height: 1.5;
@@ -17,7 +21,7 @@ a{
 
 .side-bar > * {
   padding: 10px 15px;
-  position: fixed;
+
 }
 
 .side-bar .nav a,
