@@ -1,17 +1,8 @@
 $(function(){
     'use strict';
-    window.Validator = function(val, rule){
-        this.validate_max = function() {           
-            val = parseFloat(val);
-            return val <= rule.max;
-        }
-    }
 
-    var validator = new Validator('15', {
-        max: 100
-    });
-    
-    var result = validator.validate_max();
-    console.log('result: ', result);
+    var test = new Input('#test');
+    var valid = test.validator.is_valid();
+    console.log('valid: ', valid)
 })
 
