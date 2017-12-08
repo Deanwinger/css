@@ -1,8 +1,8 @@
-$(function(){
-    'use strict';
+'use strict';
 
-    var test = new Input('#test');
-    var valid = test.validator.is_valid();
-    console.log('valid: ', valid)
-})
+var test = new Input($('#test'));
+console.log('test: ', test)
+var valid = test.validator.is_valid();
+// console.log('valid: ', valid)
+
 
