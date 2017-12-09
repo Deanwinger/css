@@ -1,8 +1,13 @@
 'use strict';
 
-var test = new Input($('#test'));
-console.log('test: ', test)
-var valid = test.validator.is_valid();
-// console.log('valid: ', valid)
+var inputs = $('[data-rule]');
+var user_inputs = [];
+
+inputs.each(function(key, node){
+    console.log("key, value: ", key, node) 
+    user_inputs.push(new Input(node));
+})
+
+console.log("my_inputs: ", user_inputs) 
 
 

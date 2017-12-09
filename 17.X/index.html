@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <div class="wrap wrap-sm">
         <div class="header">
@@ -17,11 +19,25 @@
             <form>
                 <div class="input-wrap">
                     <label>姓名</label>
-                    <input data-rule="min:2|max:10" type="text" class="input-control" id="test">
-                    <div class="input-error">
-                        姓名格式有误
-                    </div>
+                    <input data-rule="minlength:2|maxlength:6|required: true" name='name' type="text" class="input-control">
+                    <div class="input-error" id='name-input-error'>姓名格式有误</div>
                 </div>
+                <div class="input-wrap">
+                    <label>用户名</label>
+                    <input data-rule='pattern:"^[a-z0-9]*$"|minlength:2|maxlength:10|required: true' name='username' type="text" class="input-control">
+                    <div class="input-error" id='username-input-error'>用户名格式有误</div>
+                </div>
+                <div class="input-wrap">
+                    <label>密码</label>
+                    <input data-rule="minlength:6|maxlength:18" name='password' type="password" class="input-control">
+                    <div class="input-error" id='password-input-error'>密码格式有误</div>
+                </div>
+                <div class="input-wrap">
+                    <label>自我介绍</label>
+                    <input data-rule="required: false" name='intro' type="text" class="input-control">
+                    <div class="input-error" id='intro-input-error'>格式有误</div>
+                </div>
+                <button type="submit">发送</button>
             </form>
         </div>
     </div>
@@ -31,4 +47,5 @@
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

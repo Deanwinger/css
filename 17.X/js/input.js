@@ -6,6 +6,7 @@ var Input = function(selector){
         'required': true,
     };
     var me = this;
+    var ele_error;
 
     this.load_validator = function(){
         var val = this.get_val();
@@ -18,6 +19,7 @@ var Input = function(selector){
 
     function init() {
         find_ele();
+        get_error_ele();
         parse_rule();
         me.load_validator();
         listen();
@@ -25,18 +27,29 @@ var Input = function(selector){
 
     function listen(){
         ele.on('blur', function(){
-            var r = me.validator.is_valid(me.get_val());
-            console.log('r: ', r)
+            var valid = me.validator.is_valid(me.get_val());
+            if(valid){
+                ele_error.hide();
+            }else{
+                ele_error.show();
+            }
         })
     }
+    function get_error_ele() {
+        ele_error = $(get_error_id());
+    }
 
+    function get_error_id() {
+        return $("#" + ele.attr('name') + "-input-error")
+    }
+    
     function find_ele() {
         if (selector instanceof $) {
             ele = selector;
         }else {
             ele = $(selector);
         }
-    };
+};
 
     function parse_rule() {
         var rule_str = ele.data('rule');
@@ -45,12 +58,10 @@ var Input = function(selector){
         var rule_arr = rule_str.split('|');
         for(var i=0; i<rule_arr.length; i++){
             var item_str = rule_arr[i];
-            console.log("item_str: ", item_str)
             var item_arr = item_str.split(':');
             rule[item_arr[0]] = JSON.parse(item_arr[1]);
         }
-        console.log('rule: ', rule)
-    };
+};
     init();
 }
 
