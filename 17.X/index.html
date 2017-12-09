@@ -15,11 +15,11 @@
         <div class="header">
             <h1>Send Me A Email</h1>
         </div>
-        <div class="form">
+        <div class="form" id="signup">
             <form>
                 <div class="input-wrap">
                     <label>姓名</label>
-                    <input data-rule="minlength:2|maxlength:6|required: true" name='name' type="text" class="input-control">
+                    <input data-rule="minlength:2|maxlength:12|required: true" name='name' type="text" class="input-control">
                     <div class="input-error" id='name-input-error'>姓名格式有误</div>
                 </div>
                 <div class="input-wrap">
@@ -37,7 +37,7 @@
                     <input data-rule="required: false" name='intro' type="text" class="input-control">
                     <div class="input-error" id='intro-input-error'>格式有误</div>
                 </div>
-                <button type="submit">发送</button>
+                <button calss="button-control" type="submit">发送</button>
             </form>
         </div>
     </div>

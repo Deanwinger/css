@@ -9,7 +9,8 @@ var Validator = function (val, rule) {
     this.is_valid = function (new_val) {
         var key;
 
-        val = new_val || val;
+        if(new_val !== undefined)
+            val = new_val;
         // 如果不是必填项且用户没有添加任何内容，则直接判定为合法
         if (!rule.required && !val)
             return true;

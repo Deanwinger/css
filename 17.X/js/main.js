@@ -1,13 +1,25 @@
 'use strict';
 
-var inputs = $('[data-rule]');
-var user_inputs = [];
+var inputs = $('[data-rule]')
+    , form = $('#signup')
+    , user_inputs = [];
 
 inputs.each(function(key, node){
-    console.log("key, value: ", key, node) 
     user_inputs.push(new Input(node));
 })
 
-console.log("my_inputs: ", user_inputs) 
+form.on('submit', function(e){
+    e.preventDefault();
+    inputs.trigger('blur')
+    for( var i=0; i< user_inputs.length; i++) {
+        var item = user_inputs[i];
+        var r = item.validator.is_valid(); 
+        if (!r) {
+            alert('invalid!')
+            return;
+        }
+    };
+alert("发送成功")
+})
 
 
