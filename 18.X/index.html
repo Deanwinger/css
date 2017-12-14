@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .active{
+            background: #a10;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
+    <!-- <div id="app">
         <div>
             <input type="text" v-model="name">
             <span v-show="name">Your name: {{name}}</span>
@@ -20,6 +25,13 @@
             <input type="text" v-model="sex">
             <span v-show="sex">Your sex: {{sex}}</span>
         </div>
+    <!-- </div> -->
+    <div id="background">
+        <!-- 键名是要添加的类， 值是条件 -->
+        <a :href="url" :class='{active: isActive}'> 
+            <!-- <img v-bind:src="img"> -->
+            点我
+        </a>
     </div>
     <script src="./lib/vue.js"></script>
     <script src="./js/main.js"></script>
