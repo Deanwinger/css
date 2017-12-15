@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .active{
+        .active {
             background: #a10;
         }
     </style>
 </head>
+
 <body>
     <!-- <div id="app">
         <div>
@@ -37,14 +39,67 @@
     </div> -->
 
     <!-- v-on 快捷方式@-->
-    <div id="event">
+    <!-- <div id="event">
         <button v-on="{mouseenter: onEnter, mouseleave: onOut}" v-on:click="onClick">点我</button>
         <form v-on:keyup="onKeyup" v-on:submit.prevent="onSubmit()">
             <input type="text">
             <button type="submit">提交</button>
         </form>
     </div>
+
+    <!-- v-model 三个选项llazy, trim, number-->
+    <!-- <div id="modes">
+        <input type="text" v-model.lazy='name'><br>
+        {{name}}
+    </div> -->
+
+    <!-- v-model 三个修饰符lazy, trim, number-->
+    <!-- <div id="modes">
+        <input type="text" v-model.lazy='name'><br>
+        {{name}}
+    </div> -->
+
+    <!-- v-model 其他用法-->
+    <div id="muse">
+        <!-- <label>
+            男
+            <input type="radio" v-model='sex' value="male">
+        </label>
+        <label>
+            女
+            <input type="radio" v-model='sex' value="female">
+        </label> -->
+        <!-- <label>
+            男
+            <input type="checkbox" v-model='sex' value="male">
+        </label>
+        <label>
+            女
+            <input type="checkbox" v-model='sex' value="female">
+        </label> -->
+        <!-- {{sex}} -->
+        <!-- <textarea v-model="article">
+        </textarea> -->
+        <div>where are you from?</div>
+        <select v-model="from">
+            <option value="1">岳阳</option>
+            <option value="2">长沙</option>
+            <option value="3">华容</option>
+            <option value="4">南县</option>
+            <option value="5">深圳</option>
+        </select>
+        <div>where are you going?</div>
+        <select v-model="dest" multiple>
+                <option value="1">岳阳</option>
+                <option value="2">长沙</option>
+                <option value="3">华容</option>
+                <option value="4">南县</option>
+                <option value="5">深圳</option>
+            </select>
+    </div>
+
     <script src="./lib/vue.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

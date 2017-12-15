@@ -17,29 +17,46 @@
 //     }
 // })
 
-var event = new Vue({
-    el: '#event',
+// var event = new Vue({
+//     el: '#event',
+//     data: {
+//     },
+//     methods: {
+//         onClick: function() {
+//             console.log('clicked')
+//         },
+
+//         onEnter: function() {
+//             console.log('on')
+//         },
+
+//         onOut: function() {
+//             console.log('leave')
+//         },
+
+//         onSubmit: function() {
+//             console.log('submitted');
+//         },
+
+//         onKeyup: function() {
+//             console.log('key pressed');
+//         },
+//     }
+// })
+
+// var modes = new Vue({
+//     el: '#modes',
+//     data: {
+//         name: 'Alan Chen',
+//     }
+// })
+
+var muse = new Vue({
+    el: '#muse',
     data: {
-    },
-    methods: {
-        onClick: function() {
-            console.log('clicked')
-        },
-
-        onEnter: function() {
-            console.log('on')
-        },
-
-        onOut: function() {
-            console.log('leave')
-        },
-
-        onSubmit: function() {
-            console.log('submitted');
-        },
-
-        onKeyup: function() {
-            console.log('key pressed');
-        },
+        from: 3,
+        dest: ['华容',],
+        sex: ['male',],
+        article: 'One year after our "talk," I discovered I had breast cancer. I was thirty-two, the mother of three beautiful young children, and scared. The cancer had metastasized to my lymph nodes and the statistics were not great for long-term survival. After my surgery, friends and loved ones visited and tried to find the right words. No one knew what to say, and many said the wrong things. Others wept, and I tried to encourage them. I clung to hope myself.'
     }
 })
