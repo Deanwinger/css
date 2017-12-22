@@ -60,26 +60,27 @@
     </div> -->
 
     <!-- v-model 其他用法-->
-    <div id="muse">
-        <!-- <label>
+    <!-- <div id="muse">
+        <label>
             男
             <input type="radio" v-model='sex' value="male">
         </label>
         <label>
             女
             <input type="radio" v-model='sex' value="female">
-        </label> -->
-        <!-- <label>
+        </label>
+        <label>
             男
             <input type="checkbox" v-model='sex' value="male">
         </label>
         <label>
             女
             <input type="checkbox" v-model='sex' value="female">
-        </label> -->
-        <!-- {{sex}} -->
-        <!-- <textarea v-model="article">
-        </textarea> -->
+        </label>
+        {{sex}}
+        <textarea v-model="article">
+        </textarea>
+
         <div>where are you from?</div>
         <select v-model="from">
             <option value="1">岳阳</option>
@@ -95,11 +96,32 @@
                 <option value="3">华容</option>
                 <option value="4">南县</option>
                 <option value="5">深圳</option>
-            </select>
-    </div>
+        </select>
+    </div> -->
 
+    <!-- <div id='logic'>
+        <div v-if="role == 'admin' || role == 'super_admin'">
+            管理员你好
+        </div>
+        <div v-else-if="role == 'hr'">
+            代查看简历列表<br>
+            ...
+        </div>
+        <div v-else>
+            您没有权限访问此页面
+        </div>
+    </div> -->
+
+    <div id="seg1">
+        <alert></alert>
+    </div> 
+    <div id="seg2">
+        <alert></alert>
+    </div>
+    <div id="calcs"></div>
     <script src="./lib/vue.js"></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/component.js"></script>
 </body>
 
-</html>
+</html>     
