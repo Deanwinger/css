@@ -10,6 +10,9 @@
         .active {
             background: #a10;
         }
+        .liked{
+            background: deeppink;
+        }
     </style>
 </head>
 
@@ -112,13 +115,36 @@
         </div>
     </div> -->
 
-    <div id="seg1">
+    <!-- <div id="seg1">
         <alert></alert>
     </div> 
     <div id="seg2">
         <alert></alert>
     </div>
-    <div id="calcs"></div>
+    <div id="calcs"></div> -->
+
+    <!-- 18.10配置组件 -->
+    <!-- <div id="app">
+        <like></like>
+    </div>
+
+    <template id="like-component-tpl">
+        <button :class="{liked: liked}" @click="toggle_like()">
+            赞 {{like_count}}
+        </button>
+    </template> -->
+
+    <!-- 18.11配置组件之父子通信 -->
+    <!-- <div id="app">
+        <user username='alan'> 
+    </div> -->
+
+    <!-- 18.11配置组件之父子通信 -->
+    <div id="app">
+        <balance></balance> 
+    </div>
+
+    
     <script src="./lib/vue.js"></script>
     <!-- <script src="./js/main.js"></script> -->
     <script src="./js/component.js"></script>
